@@ -2,10 +2,6 @@
 
 Runtime fixes for Star Wars: Knights of the Old Republic designed for Kotor Patch Manager 0.6.3.
 
-## Downloads
-
-Ready-to-install `.kpatch` files are provided on the GitHub Releases page. The repository itself contains the unpacked source definitions for each patch.
-
 ## Patches
 
 ### DialogueLetterboxFix
@@ -41,7 +37,3 @@ These patches target the KOTOR 1.03 executables supported by Kotor Patch Manager
 4. Open Kotor Patch Manager and install the patch.
 
 For the post-combat fix, install either `PostCombatFix.kpatch` or `PostCombatFix60fps.kpatch`, not both.
-
-## Source format
-
-These patches do not use a separate DLL. Their source consists of the KPatch `manifest.toml` and `hooks.toml` definitions, including the raw SIMPLE/REPLACE hook bytecode used by Kotor Patch Manager.
