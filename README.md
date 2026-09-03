@@ -7,17 +7,11 @@ Runtime fixes for Star Wars: Knights of the Old Republic designed for Kotor Patc
 ### DialogueLetterboxFix
 Corrects high-FPS timing in the dialogue letterbox animation, preventing delayed black bars/subtitle presentation and the corresponding initial dialogue skip delay.
 
-Source: `DialogueLetterboxFix/src/`
-
 ### PostCombatFix
 Fixes the brief post-combat movement freeze with no simulated 60 FPS delay.
 
-Source: `PostCombatFix/src/`
-
 ### PostCombatFix60fps
 Fixes the same post-combat movement issue while preserving timing closer to the game's original 60 FPS behavior.
-
-Source: `PostCombatFix60fps/src/`
 
 Only use one of the two post-combat patches at a time. `DialogueLetterboxFix` can be used alongside either post-combat patch.
 
