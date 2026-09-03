@@ -2,26 +2,16 @@
 
 Runtime fixes for Star Wars: Knights of the Old Republic designed for Kotor Patch Manager 0.6.3.
 
-## Downloads
-
-Ready-to-install `.kpatch` files are provided on the GitHub Releases page. The repository itself contains the unpacked source definitions for each patch.
-
 ## Patches
 
 ### DialogueLetterboxFix
 Corrects high-FPS timing in the dialogue letterbox animation, preventing delayed black bars/subtitle presentation and the corresponding initial dialogue skip delay.
 
-Source: `DialogueLetterboxFix/src/`
-
 ### PostCombatFix
 Fixes the brief post-combat movement freeze with no simulated 60 FPS delay.
 
-Source: `PostCombatFix/src/`
-
 ### PostCombatFix60fps
 Fixes the same post-combat movement issue while preserving timing closer to the game's original 60 FPS behavior.
-
-Source: `PostCombatFix60fps/src/`
 
 Only use one of the two post-combat patches at a time. `DialogueLetterboxFix` can be used alongside either post-combat patch.
 
@@ -41,7 +31,3 @@ These patches target the KOTOR 1.03 executables supported by Kotor Patch Manager
 4. Open Kotor Patch Manager and install the patch.
 
 For the post-combat fix, install either `PostCombatFix.kpatch` or `PostCombatFix60fps.kpatch`, not both.
-
-## Source format
-
-These patches do not use a separate DLL. Their source consists of the KPatch `manifest.toml` and `hooks.toml` definitions, including the raw SIMPLE/REPLACE hook bytecode used by Kotor Patch Manager.
