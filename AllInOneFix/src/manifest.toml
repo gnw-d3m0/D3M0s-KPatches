@@ -1,0 +1,23 @@
+[patch]
+id = "k1-all-in-one-fix"
+name = "K1 All-in-One Fix"
+version = "0.1.0"
+author = "D3M0"
+description = "Combines all high-FPS fixes, using the 60 FPS post-combat timing."
+
+requires = []
+conflicts = [
+    "dialogue-letterbox-fix",
+    "post-combat-movement-fix",
+    "post-combat-movement-fix-nodelay",
+    "k1-freelook-sensitivity-fix",
+    "k1-animateuv-fix",
+    "k1-lightsaber-trail-fix",
+    "k1-danglymesh-high-fps-fix",
+    "k1-water-forcefield-fix",
+]
+
+[patch.supported_versions]
+kotor1_gog_103 = "9C10E0450A6EECA417E036E3CDE7474FED1F0A92AAB018446D156944DEA91435"
+kotor1_steam_103 = "34E6D971C034222A417995D8E1E8FDD9F8781795C9C289BD86C499A439F34C88"
+kotor1_cdcrack_103 = "761F9466F456A83909036BAEBB5C43167D722387BE66E54617BA20A8C49E9886"
