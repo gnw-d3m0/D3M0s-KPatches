@@ -28,7 +28,7 @@ Fixes tree leaves and similar movement effects at high FPS.
 ### WaterForceFieldHighFPSFix
 Fixes water ripples and force field effects above 60 FPS.
 
-Only use one of the two post-combat patches at a time. `DialogueLetterboxFix` can be used alongside either post-combat patch.
+Only use one of the two post-combat patches at a time.
 
 ## Supported executables
 
