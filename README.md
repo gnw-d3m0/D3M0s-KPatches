@@ -13,6 +13,21 @@ Fixes the brief post-combat movement freeze with no simulated 60 FPS delay.
 ### PostCombatFix60fps
 Fixes the same post-combat movement issue while preserving timing closer to the game's original 60 FPS behavior.
 
+### FreeLookMouseSensitivityFix
+Keeps free-look mouse sensitivity consistent at high FPS.
+
+### HighFPSAnimationFixes
+Fixes high-FPS animation issues with flashing mines, rivers, waterfalls, and more.
+
+### LightsaberTrailHighFPSFix
+Fixes lightsaber trail effects at high FPS.
+
+### TreeLeavesHighFPSFix
+Fixes tree leaves and similar movement effects at high FPS.
+
+### WaterForceFieldHighFPSFix
+Fixes water ripples and force field effects above 60 FPS.
+
 Only use one of the two post-combat patches at a time. `DialogueLetterboxFix` can be used alongside either post-combat patch.
 
 ## Supported executables

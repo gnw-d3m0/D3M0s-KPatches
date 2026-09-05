@@ -1,0 +1,24 @@
+[metadata]
+target_versions = [
+    "9C10E0450A6EECA417E036E3CDE7474FED1F0A92AAB018446D156944DEA91435",
+    "34E6D971C034222A417995D8E1E8FDD9F8781795C9C289BD86C499A439F34C88",
+    "761F9466F456A83909036BAEBB5C43167D722387BE66E54617BA20A8C49E9886",
+]
+
+[[hooks]]
+address = 0x00461823
+type = "detour"
+original_bytes = [0xA1, 0xF4, 0x46, 0x7A, 0x00]
+function = "GateWaterControllerFrame"
+skip_original_bytes = false
+exclude_from_restore = []
+
+[[hooks]]
+address = 0x004618BF
+type = "detour"
+original_bytes = [
+    0xD9, 0x44, 0x24, 0x18, 0xD8, 0x4F, 0x54
+]
+function = "FixWaterVirtualFrameDelta"
+skip_original_bytes = false
+exclude_from_restore = []
