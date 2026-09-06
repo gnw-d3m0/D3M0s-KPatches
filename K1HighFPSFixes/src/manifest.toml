@@ -1,9 +1,9 @@
 [patch]
-id = "k1-all-in-one-fix"
-name = "K1 All-in-One Fix"
-version = "0.1.0"
+id = "k1-high-fps-fix"
+name = "K1 High FPS Fix"
+version = "1.0.0"
 author = "D3M0"
-description = "Combines all high-FPS fixes, using the 60 FPS post-combat timing."
+description = "Fixes all known high fps problems in Kotor 1. Tested up to 240 fps with no known issues."
 
 requires = []
 conflicts = [

@@ -119,7 +119,9 @@ __attribute__((noinline, optnone)) static void UpdateFrame() {
     if (frameSeconds >= highFPSThreshold) {
         highFPS = 0;
         allowUpdate = 1;
-        accumulatedSeconds = 0.0f;
+        // Keep the unfinished virtual frame. Native-rate frames account for
+        // their own delta; clearing this remainder would discard time accrued
+        // during preceding high-FPS frames on every threshold crossing.
         return;
     }
 
