@@ -1,9 +1,9 @@
 [patch]
 id = "k2-high-fps-fix"
-name = "K2 High FPS Fix"
-version = "0.1.0"
-author = "d3m0"
-description = "Fixes high-FPS movement, dialogue, mouse sensitivity, and animation issues in KOTOR II's Aspyr build."
+name = "K2 High FPS Fixes"
+version = "0.2.1"
+author = "D3M0"
+description = "Fixes high FPS timing and animation issues in KOTOR 2."
 
 requires = []
 conflicts = []

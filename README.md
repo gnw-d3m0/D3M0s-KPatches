@@ -1,4 +1,4 @@
-# D3M0's KOTOR 1 KPatch Fixes
+# D3M0's KOTOR KPatch Fixes
 
 Runtime fixes for Star Wars: Knights of the Old Republic designed for Kotor Patch Manager 0.6.3.
 
@@ -6,6 +6,9 @@ Runtime fixes for Star Wars: Knights of the Old Republic designed for Kotor Patc
 
 ### K1HighFPSFixes
 Combines all fixes into one patch. Use this instead of the individual patches.
+
+### K2HighFPSFixes
+Combines the KOTOR 2 high-FPS fixes into one patch.
 
 ### DialogueLetterboxFix
 Corrects high-FPS timing in the dialogue letterbox animation, preventing delayed black bars/subtitle presentation and the corresponding initial dialogue skip delay.
