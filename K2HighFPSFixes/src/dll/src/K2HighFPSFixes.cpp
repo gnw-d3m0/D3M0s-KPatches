@@ -17,8 +17,8 @@ template<class T>
 __attribute__((always_inline)) static inline volatile T& mem(u32 address) {
     return *reinterpret_cast<volatile T*>(address);
 }
-static constexpr u32 frameAddress = 0x00A14C64;
-static constexpr u32 deltaAddress = 0x009F6C40;
+static u32 frameAddress = 0x00A14C64;
+static u32 deltaAddress = 0x009F6C40;
 static constexpr float referenceDelta = 0.01666666753590106964111328125f;
 
 static inline bool positiveFinite(float value) {
@@ -410,3 +410,25 @@ EXPORT_HOOK(ResetShakeTimer, ResetShakeFromEdx)
 EXPORT_HOOK(ResetShakeTimerOnCreate, ResetShakeFromEcx)
 EXPORT_HOOK(FixPreviewMilliseconds, PreviewMilliseconds)
 EXPORT_HOOK(ResetPreviewTimer, ResetPreviewFromEcx)
+
+static void UseSteamAddresses() {
+    frameAddress = 0x00A1BBBC;
+    deltaAddress = 0x009F62B0;
+}
+
+extern "C" __attribute__((noinline)) void JitterGateSteam(SavedRegisters* saved) {
+    UseSteamAddresses();
+    JitterGate(saved);
+}
+extern "C" __attribute__((noinline)) void WaterGateSteam(SavedRegisters* saved) {
+    UseSteamAddresses();
+    WaterGate(saved);
+}
+extern "C" __attribute__((noinline)) void CycleUpdateSteam(SavedRegisters* saved) {
+    UseSteamAddresses();
+    Additional::CycleUpdate(saved);
+}
+
+EXPORT_HOOK(GateTextureJitterSteam, JitterGateSteam)
+EXPORT_HOOK(GateWaterControllerFrameSteam, WaterGateSteam)
+EXPORT_HOOK(UpdateCyclingTextureSteam, CycleUpdateSteam)
