@@ -4,6 +4,9 @@ Runtime fixes for Star Wars: Knights of the Old Republic designed for Kotor Patc
 
 ## Patches
 
+### HighFpsFixes
+Combines K1HighFPSFixes and K2HighFPSFixes in one patch.
+
 ### K1HighFPSFixes
 Combines all fixes into one patch. Use this instead of the individual patches.
 
