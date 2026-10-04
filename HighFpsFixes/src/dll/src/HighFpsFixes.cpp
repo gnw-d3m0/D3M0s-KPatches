@@ -396,7 +396,8 @@ extern "C" __declspec(dllexport) __attribute__((naked)) void exportName() { \
         "subl $512, %esp\n\t" \
         "fxsave (%esp)\n\t" \
         "fninit\n\t" \
-        "subl $4, %esp\n\t" \
+        "pushl $0x1F80\n\t" \
+        "ldmxcsr (%esp)\n\t" \
         "pushl $_" #handler "\n\t" \
         "pushl 4(%ebp)\n\t" \
         "pushl %ebx\n\t" \
@@ -602,7 +603,9 @@ extern "C" __declspec(dllexport) __attribute__((naked)) void exportName() { \
         "subl $512, %esp\n\t" \
         "fxsave (%esp)\n\t" \
         "fninit\n\t" \
-        "subl $12, %esp\n\t" \
+        "pushl $0x1F80\n\t" \
+        "ldmxcsr (%esp)\n\t" \
+        "subl $8, %esp\n\t" \
         "pushl %ebx\n\t" \
         "calll _" #handler "\n\t" \
         "addl $16, %esp\n\t" \
